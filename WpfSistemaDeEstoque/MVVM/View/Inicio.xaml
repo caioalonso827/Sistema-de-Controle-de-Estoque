@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="WpfSistemaDeEstoque.MVVM.View.Inicio"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfSistemaDeEstoque.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="800">
+    <Grid>
+        <StackPanel>
+            <Label Height="65" Margin="30,30,0,0" Content="Adicionar Produto" Foreground="Black" FontSize="40" FontWeight="SemiBold"></Label>
+            
+            <Label Height="37" Content="Nome" FontSize="20" Margin="30,20,0,0" FontWeight="SemiBold" ></Label>
+            <Border Background="White" CornerRadius="10" Height="48" Width="737" BorderBrush="Silver" BorderThickness="2">
+                <TextBox Background="Transparent" VerticalContentAlignment="Center" FontSize="16"  BorderBrush="{x:Null}" ></TextBox>
+            </Border>
+
+            <Label Height="37" Content="Categoria" FontSize="20" Margin="30,20,0,0" FontWeight="SemiBold"></Label>
+            <ComboBox Background="White" BorderBrush="{x:Null}" VerticalContentAlignment="Center" FontSize="16" Height="48" Width="737"></ComboBox>
+
+            <Label Height="37" Content="Quatidade em Estoque" FontSize="20" Margin="30,20,0,0" FontWeight="SemiBold"></Label>
+            <Border Background="White" CornerRadius="10" Height="48" Width="737" BorderBrush="Silver" BorderThickness="2">
+                <TextBox Background="Transparent" BorderBrush="{x:Null}" VerticalContentAlignment="Center" FontSize="16"></TextBox>
+            </Border>
+
+            <Border Height="50" Width="165" HorizontalAlignment="Left" Margin="30,30,0,0" CornerRadius="10" Background="#002348">
+                <Button Background="Transparent" BorderBrush="{x:Null}" Content="Salvar" FontSize="20" Foreground="White" FontWeight="SemiBold"></Button>
+            </Border>
+
+        </StackPanel>  
+    </Grid>
+</UserControl>

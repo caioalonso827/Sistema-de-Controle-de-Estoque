@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfSistemaDeEstoque.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfSistemaDeEstoque"
+        xmlns:viewModel="clr-namespace:WpfSistemaDeEstoque.MVVM.ViewModel"
+        mc:Ignorable="d"
+        Title="Sistema De Estoque" Height="720" Width="1200" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Background="Transparent">
+
+    <Window.DataContext>
+        <viewModel:MainViewModel></viewModel:MainViewModel>
+    </Window.DataContext>
+    
+    <Border Background="White" CornerRadius="30" Grid.ColumnSpan="2">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="350"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" Background="#002348" CornerRadius="30,0,0,30">
+                <StackPanel Height="650">
+                    <Label Height="59" Content="Controle De"  Foreground="White" FontSize="40" FontWeight="Bold" HorizontalAlignment="Center" />
+                    <Label Height="62" Content="Estoque"  Foreground="White" FontSize="40" FontWeight="Bold" HorizontalAlignment="Center" />
+
+                    <StackPanel Height="423" Margin="0,40,0,0" Width="280">
+                        <RadioButton Height="50" Content="Inicio" Style="{StaticResource MenuLateral}" IsChecked="True" Command="{Binding inicioRelayCommand}"/>
+                        <RadioButton Height="50" Content="Produtos" Style="{StaticResource MenuLateral}" Margin="0,20,0,0" Command="{Binding ProdutosRelayCommand}"></RadioButton>
+                        <RadioButton Height="50" Content="Categorias" Style="{StaticResource MenuLateral}" Margin="0,20,0,0" Command="{Binding categoriaRelayCommand}"></RadioButton>
+                        <RadioButton Height="50" Content="Movimentações" Style="{StaticResource MenuLateral}" Margin="0,20,0,0"></RadioButton>
+                        <RadioButton Height="50" Content="Relatórios" Style="{StaticResource MenuLateral}" Margin="0,20,0,0"></RadioButton>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <UserControl Grid.Column="1" Height="650" Width="800" Content="{Binding CurrentView}"></UserControl>
+        </Grid>
+    </Border>
+
+
+</Window>
