@@ -3,8 +3,8 @@
 ## 🖼️ Screenshots
 > *(adicione aqui imagens das telas do WPF, por exemplo: tela de login, cadastro de produtos, movimentações, relatórios)*
 
-![Tela Cadastro Produto](<img width="1292" height="786" alt="image" src="https://github.com/user-attachments/assets/d4ccf215-fcd1-4774-ac89-0e71aa243e0f" />
-)
+<img width="1292" height="786" alt="image" src="https://github.com/user-attachments/assets/d4ccf215-fcd1-4774-ac89-0e71aa243e0f" />
+
 ![Cadastro de Produto](docs/images/cadastro-produto.png)
 ![Movimentações](docs/images/movimentacoes.png)
 
