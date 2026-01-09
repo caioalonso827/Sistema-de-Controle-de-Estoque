@@ -68,5 +68,6 @@ https://sistema-de-controle-de-estoque-rmi1.onrender.com/swagger
 ---
 
 ## 👨‍💻 Autor
-- **Caio – Desenvolvedor do projeto
+
+- **Caio – Desenvolvedor do projeto**
 
