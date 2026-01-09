@@ -17,7 +17,7 @@ namespace WpfSistemaDeEstoque.Data
         public ApiSevice()
         {
             httpClient = new HttpClient();
-            httpClient.BaseAddress = new Uri("https://localhost:7153/");
+            httpClient.BaseAddress = new Uri("https://sistema-de-controle-de-estoque-rmi1.onrender.com/");
         }
 
         public async Task<ProdutoModels> cadastroProduto(ProdutoModels produtoModels)
