@@ -5,8 +5,16 @@
 
 <img width="1292" height="786" alt="image" src="https://github.com/user-attachments/assets/d4ccf215-fcd1-4774-ac89-0e71aa243e0f" />
 
-![Cadastro de Produto](docs/images/cadastro-produto.png)
-![Movimentações](docs/images/movimentacoes.png)
+<img width="1313" height="767" alt="image" src="https://github.com/user-attachments/assets/214204ba-78cd-4351-97c2-bb987dd49d71" />
+
+<img width="1270" height="767" alt="image" src="https://github.com/user-attachments/assets/3486c17f-60f0-4966-b2dd-3fa175ce3d9c" />
+
+<img width="1278" height="779" alt="image" src="https://github.com/user-attachments/assets/1ea0b0eb-0191-4b3a-a8fc-150cc88e4ec8" />
+
+<img width="1271" height="784" alt="image" src="https://github.com/user-attachments/assets/6b901942-edfe-46a7-b118-6f286b86c291" />
+
+<img width="1278" height="774" alt="image" src="https://github.com/user-attachments/assets/f82ada51-09a1-4663-bd05-6cf1972b2092" />
+
 
 ---
 
@@ -33,9 +41,9 @@ O **Sistema de Controle de Estoque** é uma aplicação completa composta por:
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **C# / .NET 8**
+- **C# / .NET 10**
 - **WPF** (Windows Presentation Foundation)
-- **ASP.NET Core Minimal API**
+- **ASP.NET Core Web API**
 - **Entity Framework Core**
 - **PostgreSQL**
 - **Swagger UI**
@@ -54,8 +62,6 @@ Exemplo de alguns endpoints disponíveis:
 
 ---
 
-## 🔧 Como Rodar
+#👉 Swagger da API 
+(sistema-de-controle-de-estoque-rmii.onrender.com in Bing)
 
-### 1. Clonar o repositório
-```bash
-git clone https://github.com/seuusuario/sistema-controle-estoque.git
