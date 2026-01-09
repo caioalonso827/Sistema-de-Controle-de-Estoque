@@ -8,6 +8,6 @@ namespace Sistema_de_Controle_de_Estoque.Models
         public string Nome { get; set; }
 
         [JsonIgnore]
-        public List<Produto> produtos { get; set; }
+        public List<Produto>? produtos { get; set; }
     }
 }

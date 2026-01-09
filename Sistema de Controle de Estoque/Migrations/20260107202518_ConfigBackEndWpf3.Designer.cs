@@ -12,8 +12,8 @@ using Sistema_de_Controle_de_Estoque.Data;
 namespace Sistema_de_Controle_de_Estoque.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260106161433_FirstConfig")]
-    partial class FirstConfig
+    [Migration("20260107202518_ConfigBackEndWpf3")]
+    partial class ConfigBackEndWpf3
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

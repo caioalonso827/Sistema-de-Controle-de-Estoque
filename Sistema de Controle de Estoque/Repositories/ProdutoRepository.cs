@@ -15,29 +15,32 @@ namespace Sistema_de_Controle_de_Estoque.Repositories
         }
 
 
-        public async Task<Produto> cadastrarProduto (Produto produto)
+        public async Task<Produto> cadastrarProduto (CadastroProduto produto)
         {
-            Categoria categoria = await _contex.categoria.FirstOrDefaultAsync(x => x.Id == produto.IdCategoria);
+            Categoria categoria = await _contex.categoria.FirstOrDefaultAsync(x => x.Nome == produto.NomeCategoria);
             if (categoria == null) { throw new Exception("Não existe essa categoria"); }
 
-            produto.Categoria = categoria;
+            Produto produto1 = new Produto();
+            produto1.Nome = produto.Nome;
+            produto1.Categoria = categoria;
+            produto1.quantidade = produto.quantidade;
 
-            await _contex.produtos.AddAsync(produto);
+            await _contex.produtos.AddAsync(produto1);
 
             await _contex.SaveChangesAsync();
-            return produto;
+            return produto1;
         }
 
         public async Task<List<Produto>> listarTodos ()
         {
-            List<Produto> produtos = _contex.produtos.ToList ();
+            List<Produto> produtos = _contex.produtos.Include(i => i.Categoria).ToList ();
 
             return produtos;
         }
 
         public async Task<List<Produto>> listarEstoqueBaixo ()
         {
-            List<Produto> produtos = await _contex.produtos.Where(x => x.quantidade < 5).ToListAsync();
+            List<Produto> produtos = await _contex.produtos.Include(x=>x.Categoria).Where(x => x.quantidade < 5).ToListAsync();
             return produtos;
         }
 

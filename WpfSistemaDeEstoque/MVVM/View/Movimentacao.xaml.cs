@@ -10,26 +10,31 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WpfSistemaDeEstoque.Data;
 using WpfSistemaDeEstoque.MVVM.ViewModel;
 
 namespace WpfSistemaDeEstoque.MVVM.View
 {
     /// <summary>
-    /// Interação lógica para Produtos.xam
+    /// Interação lógica para Movimentacao.xam
     /// </summary>
-     partial class Produtos : UserControl
-
+    public partial class Movimentacao : UserControl
     {
-
-        public Produtos()
+        public Movimentacao()
         {
             InitializeComponent();
         }
 
-        public async void User_Loaded (object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var vm = DataContext as ProdutosViewModels; await vm.listarProdutos();
+            var popup = new CadastroMovimentacao();
+            popup.Show();
+            
+        }
+
+        private async void Mov_Loaded(object sender, RoutedEventArgs e)
+        {
+            var vm = DataContext as MovimentacaoViewModel;
+            vm.ListarMovimentacaos();
         }
     }
 }

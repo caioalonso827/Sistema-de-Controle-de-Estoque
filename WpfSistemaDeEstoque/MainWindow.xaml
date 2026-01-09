@@ -28,8 +28,8 @@
                         <RadioButton Height="50" Content="Inicio" Style="{StaticResource MenuLateral}" IsChecked="True" Command="{Binding inicioRelayCommand}"/>
                         <RadioButton Height="50" Content="Produtos" Style="{StaticResource MenuLateral}" Margin="0,20,0,0" Command="{Binding ProdutosRelayCommand}"></RadioButton>
                         <RadioButton Height="50" Content="Categorias" Style="{StaticResource MenuLateral}" Margin="0,20,0,0" Command="{Binding categoriaRelayCommand}"></RadioButton>
-                        <RadioButton Height="50" Content="Movimentações" Style="{StaticResource MenuLateral}" Margin="0,20,0,0"></RadioButton>
-                        <RadioButton Height="50" Content="Relatórios" Style="{StaticResource MenuLateral}" Margin="0,20,0,0"></RadioButton>
+                        <RadioButton Height="50" Content="Movimentações" Style="{StaticResource MenuLateral}" Margin="0,20,0,0" Command="{Binding movimentacaoRelayCommand}"></RadioButton>
+                        <RadioButton Height="50" Content="Relatórios" Style="{StaticResource MenuLateral}" Margin="0,20,0,0" Command="{Binding relatorioRelayCommand}"></RadioButton>
                     </StackPanel>
                 </StackPanel>
             </Border>

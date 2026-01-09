@@ -11,11 +11,15 @@ namespace WpfSistemaDeEstoque.MVVM.ViewModel
 		private Inicio inicioVm {  get; set; }
         private Produtos produtosVm { get; set; }
         private Categorias categoriasVm { get; set; }
+        private Movimentacao movimentacaoVm { get; set; }
+        private Relatorios relatoriosVm { get; set; }
 
 
         public RelayCommand inicioRelayCommand { get; set; }
         public RelayCommand ProdutosRelayCommand { get; set; }
         public RelayCommand categoriaRelayCommand { get; set; }
+        public RelayCommand movimentacaoRelayCommand { get; set; }
+        public RelayCommand relatorioRelayCommand { get; set; }
 
 
 		private object _currentView;
@@ -31,11 +35,15 @@ namespace WpfSistemaDeEstoque.MVVM.ViewModel
             inicioVm = new Inicio();
             produtosVm = new Produtos();
             categoriasVm = new Categorias();
+            movimentacaoVm = new Movimentacao();
+            relatoriosVm = new Relatorios();
             CurrentView = inicioVm;
 
             ProdutosRelayCommand = new RelayCommand ( o => { CurrentView = produtosVm; });
             inicioRelayCommand = new RelayCommand(o => { CurrentView = inicioVm; });
             categoriaRelayCommand = new RelayCommand(o => { CurrentView = categoriasVm; });
+            movimentacaoRelayCommand = new RelayCommand(o => {CurrentView = movimentacaoVm; });
+            relatorioRelayCommand = new RelayCommand(o => { CurrentView = relatoriosVm; });
             
         }
     }

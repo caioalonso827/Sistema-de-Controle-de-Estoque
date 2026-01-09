@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Sistema_de_Controle_de_Estoque.Migrations
 {
     /// <inheritdoc />
-    public partial class FirstConfig : Migration
+    public partial class ConfigBackEndWpf2 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

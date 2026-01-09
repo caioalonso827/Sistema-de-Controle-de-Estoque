@@ -18,7 +18,7 @@ namespace Sistema_de_Controle_de_Estoque.Controllers
 
         [HttpPost]
         [Route("Cadastrar")]
-        public async Task<ActionResult<Produto>> cadastroProduto([FromBody] Produto produto)
+        public async Task<ActionResult<Produto>> cadastroProduto([FromBody] CadastroProduto produto)
         {
             await _produtoRepository.cadastrarProduto(produto);
 
@@ -32,6 +32,14 @@ namespace Sistema_de_Controle_de_Estoque.Controllers
             List<Produto> produtos = await _produtoRepository.listarTodos();
 
             return Ok(produtos);
+        }
+
+        [HttpGet]
+        [Route("ListarEstoqueBaixo")]
+        public async Task<List<Produto>> listarPorEstoque ()
+        {
+            List<Produto> produtos = await _produtoRepository.listarEstoqueBaixo();
+            return produtos;
         }
 
         [HttpPut]

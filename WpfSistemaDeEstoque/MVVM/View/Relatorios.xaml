@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="WpfSistemaDeEstoque.MVVM.View.Relatorios"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfSistemaDeEstoque.MVVM.View"
+             xmlns:viewModel="clr-namespace:WpfSistemaDeEstoque.MVVM.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="800" Loaded="Rel_Loaded">
+
+    <UserControl.DataContext>
+        <viewModel:RelatoriaViewModel></viewModel:RelatoriaViewModel>
+    </UserControl.DataContext>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Height="50" VerticalAlignment="Top" Content="Produtos Com Estoque Baixo" FontSize="35" HorizontalAlignment="Center" FontWeight="Bold"></Label>
+        <DataGrid Height="255" VerticalAlignment="Top" Margin="0,70,0,0" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeColumns="False" CanUserReorderColumns="False" CanUserSortColumns="False" CanUserResizeRows="False" ItemsSource="{Binding ProdutosEstoque}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nome do Produto" Width="350" Binding="{Binding Nome}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Categoria do Produto" Width="250" Binding="{Binding Categoria.Nome}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Quatidade em Estoque" Width="190" Binding="{Binding quantidade}">
+                    <DataGridTextColumn.CellStyle>
+                        <Style TargetType="DataGridCell">
+                            <Setter Property="Background" Value="Red"></Setter>
+                        </Style>
+                    </DataGridTextColumn.CellStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+
+            <DataGrid.Resources>
+                <Style TargetType="DataGridColumnHeader">
+                    <Style.Setters>
+                        <Setter Property="FontSize" Value="16"></Setter>
+                        <Setter Property="FontWeight" Value="SemiBold"></Setter>
+                        <Setter Property="Background" Value="#002348"></Setter>
+                        <Setter Property="Foreground" Value="White"></Setter>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                        <Setter Property="Height" Value="30"></Setter>
+                    </Style.Setters>
+                </Style>
+
+                <Style TargetType="DataGridRow">
+                    <Style.Setters>
+                        <Setter Property="Height" Value="40"></Setter>
+                        <Setter Property="FontSize" Value="16"></Setter>
+                        <Setter Property="FontWeight" Value="SemiBold"></Setter>
+                        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+                    </Style.Setters>
+                </Style>
+
+            </DataGrid.Resources>
+        </DataGrid>
+
+        <Label Height="50" VerticalAlignment="Top" Content="Movimentações do Dia" FontSize="35" HorizontalAlignment="Center" FontWeight="Bold" Grid.Row="1" Margin="0,7,0,0"></Label>
+        <DataGrid Height="255" VerticalAlignment="Top" Margin="0,70,0,0" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" Grid.Row="1" ItemsSource="{Binding MovimentacaoDia}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Produto" Width="200" Binding="{Binding produto.Nome}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Tipo" Width="200" Binding="{Binding Tipo}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Quantidade" Width="200" Binding="{Binding quantidade}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Data" Width="200" Binding="{Binding data}" ></DataGridTextColumn>
+            </DataGrid.Columns>
+
+            <DataGrid.Resources>
+                <Style TargetType="DataGridColumnHeader">
+                    <Style.Setters>
+                        <Setter Property="FontSize" Value="16"></Setter>
+                        <Setter Property="FontWeight" Value="SemiBold"></Setter>
+                        <Setter Property="Background" Value="#002348"></Setter>
+                        <Setter Property="Foreground" Value="White"></Setter>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                        <Setter Property="Height" Value="30"></Setter>
+                    </Style.Setters>
+                </Style>
+
+                <Style TargetType="DataGridRow">
+                    <Style.Setters>
+                        <Setter Property="Height" Value="40"></Setter>
+                        <Setter Property="FontSize" Value="16"></Setter>
+                        <Setter Property="FontWeight" Value="SemiBold"></Setter>
+                        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+                    </Style.Setters>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+    </Grid>
+</UserControl>

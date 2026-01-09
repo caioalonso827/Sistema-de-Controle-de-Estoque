@@ -41,7 +41,7 @@ namespace Sistema_de_Controle_de_Estoque.Repositories
 
             public async Task<List<Movimentacao>> listarTodas()
             {
-                List<Movimentacao> movimentacaos = _contex.movimentacao.ToList();
+                List<Movimentacao> movimentacaos = _contex.movimentacao.Include(x=>x.produto).ToList();
 
                 return movimentacaos;
             }
@@ -49,7 +49,7 @@ namespace Sistema_de_Controle_de_Estoque.Repositories
             public async Task<List<Movimentacao>> listarPorDia ()
             {
 
-            var movimentacaos = await _contex.movimentacao.Where(x => x.data == DateOnly.FromDateTime(DateTime.Today)).ToListAsync();
+            var movimentacaos = await _contex.movimentacao.Include(x=> x.produto).Where(x => x.data == DateOnly.FromDateTime(DateTime.Today)).ToListAsync();
             return movimentacaos;
             }
 

@@ -10,26 +10,26 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WpfSistemaDeEstoque.Data;
 using WpfSistemaDeEstoque.MVVM.ViewModel;
 
 namespace WpfSistemaDeEstoque.MVVM.View
 {
     /// <summary>
-    /// Interação lógica para Produtos.xam
+    /// Interação lógica para Relatorios.xam
     /// </summary>
-     partial class Produtos : UserControl
-
+    public partial class Relatorios : UserControl
     {
-
-        public Produtos()
+        public async void Rel_Loaded (object sender, RoutedEventArgs e)
         {
-            InitializeComponent();
+            var vm = DataContext as RelatoriaViewModel;
+            vm.listarEstoqueBaixo();
+
+            vm.listarMovimentacaoDia();
         }
 
-        public async void User_Loaded (object sender, RoutedEventArgs e)
+        public Relatorios()
         {
-            var vm = DataContext as ProdutosViewModels; await vm.listarProdutos();
+            InitializeComponent();
         }
     }
 }
