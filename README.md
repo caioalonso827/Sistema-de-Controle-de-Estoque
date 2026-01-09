@@ -65,3 +65,8 @@ Exemplo de alguns endpoints disponíveis:
 ## 👉 Swagger da API 
 https://sistema-de-controle-de-estoque-rmi1.onrender.com/swagger
 
+---
+
+## 👨‍💻 Autor
+- **Caio – Desenvolvedor do projeto
+
