@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  sistema-controle-estoque:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sistema-controle-estoque
+    ports:
+      - "8080:8080"
+    environment:
+      - DOTNET_RUNNING_IN_CONTAINER=true
+      - DOTNET_USE_POLLING_FILE_WATCHER=true
+    restart: always
