@@ -62,6 +62,6 @@ Exemplo de alguns endpoints disponíveis:
 
 ---
 
-#👉 Swagger da API 
-(sistema-de-controle-de-estoque-rmii.onrender.com in Bing)
+##👉 Swagger da API 
+[(sistema-de-controle-de-estoque-rmii.onrender.com in Bing)](https://sistema-de-controle-de-estoque-rmi1.onrender.com/swagger)
 
