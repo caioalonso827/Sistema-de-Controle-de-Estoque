@@ -1,7 +1,7 @@
 # 📦 Sistema de Controle de Estoque
 
 ## 🖼️ Screenshots
-> *(adicione aqui imagens das telas do WPF, por exemplo: tela de login, cadastro de produtos, movimentações, relatórios)*
+
 
 <img width="1292" height="786" alt="image" src="https://github.com/user-attachments/assets/d4ccf215-fcd1-4774-ac89-0e71aa243e0f" />
 
